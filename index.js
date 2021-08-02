@@ -11,7 +11,7 @@ let app = http.createServer((req, res) => {
     } 
       else if (req.url === '/music') {
         res.writeHead(200, {'Content-Type': 'video/mp4'});     
-        let vidstream = fs.createReadStream('assets/Omar_6.mp4');
+        let vidstream = fs.createReadStream('assets/Omar_5.mp4');
         vidstream.pipe(res);
     } 
       else if (req.url === '/about') {
