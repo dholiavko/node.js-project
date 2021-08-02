@@ -8,11 +8,13 @@ let app = http.createServer((req, res) => {
         // console.log(__dirname);
         res.writeHead(200, {'Content-Type': 'text/html'});
         res.end('<h1>Welcome to my home page!<h1>')
-    } else if (req.url === '/music') {
+    } 
+      else if (req.url === '/music') {
         res.writeHead(200, {'Content-Type': 'video/mp4'});     
         let vidstream = fs.createReadStream('assets/Omar_6.mp4');
         vidstream.pipe(res);
-    } else if (req.url === '/about') {
+    } 
+      else if (req.url === '/about') {
         // console.log(__filename);
         console.log(path.join(__dirname, 'public', 'index.html'));
         fs.readFile(
@@ -36,6 +38,6 @@ app.listen(PORT, () => console.log(`Node server running on port ${PORT}`));
 
 
 
-const Item = require('./person');
-const item1 = new Item('John Smith', 30);
-item1.greeting();
+// const Item = require('./person');
+// const item1 = new Item('John Smith', 30);
+// item1.greeting();
